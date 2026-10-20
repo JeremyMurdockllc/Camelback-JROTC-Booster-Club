@@ -1,0 +1,561 @@
+{
+  "title": "Camelback High School Booster Club Startup Playbook",
+  "author": "Camelback booster organizers",
+  "page_size": "letter",
+  "page_numbers": true,
+  "elements": [
+    {
+      "type": "heading",
+      "text": "Camelback High School Booster Club Startup Playbook",
+      "level": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Phoenix Union High School District No. 210. Working packet for parent organizers. Not legal, tax, or district advice. Confirm every filing with PXU, the Arizona Corporation Commission, the IRS, and (when needed) an Arizona nonprofit attorney or CPA. Fees and forms change."
+    },
+    {
+      "type": "paragraph",
+      "text": "Companion files: open index.html in a browser to fill officer names (saved on that computer), export a CSV/JSON roster, and refresh the bylaws draft. This PDF is the printable checklist."
+    },
+    {
+      "type": "heading",
+      "text": "Do this in this order",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "1. Meet the Camelback principal (and Athletic Director or program sponsor). Get written permission to organize. Do not fundraise yet. PXU KJA-OP-1: unapproved boosters may not operate or use facilities."
+    },
+    {
+      "type": "paragraph",
+      "text": "2. Recruit President, Vice President, Secretary, Treasurer. District employees may advise only — they cannot be officers or check signers."
+    },
+    {
+      "type": "paragraph",
+      "text": "3. Choose a legal name the principal approves. Do not put Phoenix Union, PUHSD, or the school name in the title or on the bank account. Spartan mascot is allowed with permission."
+    },
+    {
+      "type": "paragraph",
+      "text": "4. Adopt bylaws (Word draft in this folder) and a one-paragraph purpose. PXU requires a constitution/bylaws. IRS expects 501(c)(3) clauses."
+    },
+    {
+      "type": "paragraph",
+      "text": "5. File Arizona nonprofit Articles of Incorporation WITH IRS language already in them. This is not an LLC and not Articles of Organization. ACC stock Form C011 does not include IRS clauses."
+    },
+    {
+      "type": "paragraph",
+      "text": "6. Publish the articles only after ACC approval, as the approval letter instructs (A.R.S. 10-3203)."
+    },
+    {
+      "type": "paragraph",
+      "text": "7. Get a free EIN from IRS.gov (Form SS-4). Print the confirmation. Form the corporation first."
+    },
+    {
+      "type": "paragraph",
+      "text": "8. Open a two-signature bank account in the corporate name. Never use the school EIN or school letterhead."
+    },
+    {
+      "type": "paragraph",
+      "text": "9. If articles lack IRS purpose / inurement / dissolution language, file ACC Form C015 (Articles of Amendment – Nonprofit) before the 501(c)(3) application. Form 1023-EZ attests those clauses already exist."
+    },
+    {
+      "type": "paragraph",
+      "text": "10. Apply for 501(c)(3) on Pay.gov (usually Form 1023-EZ, $275 user fee). Donations are not deductible until IRS recognition."
+    },
+    {
+      "type": "paragraph",
+      "text": "11. Submit two signed PXU Booster Club Applications plus attachments to the principal (then District finance). Re-apply every year. Year-end packet due to the principal by August 31."
+    },
+    {
+      "type": "heading",
+      "text": "1. Phoenix Union approval",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Policy KJA / procedure KJA-OP-1. Only an approved booster may use PXU facilities. Approval is annual. The school keeps the original application; copies go to the District Comptroller / Executive Director of Finance."
+    },
+    {
+      "type": "heading",
+      "text": "Camelback contacts (confirm before you email)",
+      "level": 3
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Role",
+          "Name",
+          "Contact"
+        ],
+        [
+          "Athletic Director",
+          "Daniel B. Eaton",
+          "deaton@phoenixunion.org / (602) 764-7007"
+        ],
+        [
+          "Athletics Administrative Assistant",
+          "Brieanna Garcia",
+          "bgarcia1@phoenixunion.org"
+        ],
+        [
+          "Campus",
+          "Camelback High School",
+          "4612 N. 28th Street, Phoenix, AZ 85016"
+        ],
+        [
+          "PXU Student Activities",
+          "District office",
+          "studentactivities@phoenixunion.org"
+        ],
+        [
+          "Principal",
+          "Confirm at the first meeting",
+          "Signature required on the application"
+        ],
+        [
+          "Program sponsor",
+          "Coach / JROTC instructor / certified staff",
+          "Advisor only. Not an officer. Not a check signer."
+        ]
+      ],
+      "header": true
+    },
+    {
+      "type": "paragraph",
+      "text": "Official packet: https://www.pxu.org/documents/departments/bookstore/booster-club/639148  and  https://www.pxu.org/page/bookstore/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Download from that page: Booster Club Application; Formation and Operation of Booster Club (KJA-OP-1); Establishing a Non-Profit Organization; sample financial statement and bank reconciliation. The older Establishing a Non-Profit handout still cites outdated IRS dollar amounts (it says Form 990-N at $25,000; the current IRS threshold is normally $50,000) and old ACC web addresses. Use current IRS/ACC links in section 4–7."
+    },
+    {
+      "type": "heading",
+      "text": "PXU application attachments (KJA-OP-1 EB)",
+      "level": 3
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Item",
+          "New formal corporation",
+          "Notes"
+        ],
+        [
+          "Application (two signed copies)",
+          "Yes",
+          "Officers: name, address, phone, email for President, VP, Secretary, Treasurer"
+        ],
+        [
+          "Articles of Incorporation",
+          "Yes (new formal corp)",
+          "Stamped ACC copy"
+        ],
+        [
+          "Constitution and bylaws",
+          "Yes",
+          "See Word draft in this folder"
+        ],
+        [
+          "Proposed activities, events, budget",
+          "Yes",
+          ""
+        ],
+        [
+          "Anticipated maximum fiscal-year donations",
+          "Yes",
+          "Governing Board pre-approves cash donations up to this figure"
+        ],
+        [
+          "Bank statement + authorized withdrawers",
+          "When account exists",
+          "Two signers"
+        ],
+        [
+          "IRS 501(c)(3) determination letter",
+          "When received",
+          "You may incorporate first and add the letter later"
+        ],
+        [
+          "Prior-year treasurer / income statement",
+          "Renewals",
+          ""
+        ],
+        [
+          "ACC annual report (prior year)",
+          "Renewals",
+          ""
+        ]
+      ],
+      "header": true
+    },
+    {
+      "type": "paragraph",
+      "text": "Hard PXU rules: no individual student fundraising accounts; students pay required trip/participation fees to the campus bookstore; two signatures on every check; do not use the district EIN; do not use school letterhead; fundraising needs prior written principal approval; boosters should not sign student-travel contracts; employees of PXU should not be officers or account signers."
+    },
+    {
+      "type": "pagebreak"
+    },
+    {
+      "type": "heading",
+      "text": "2. Names and positions you must collect",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Fill the browser kit (index.html) or the Word roster worksheet. Do not put Social Security numbers in either file. The EIN responsible party enters an SSN only on IRS.gov."
+    },
+    {
+      "type": "paragraph",
+      "text": "President, VP, Secretary, Treasurer — PXU application, bank, 1023-EZ, bylaws signatures. Collect legal names, mailing addresses, phones, emails."
+    },
+    {
+      "type": "paragraph",
+      "text": "Directors — aim for three people who are not related. Officers may also be directors. Needed for Arizona articles and IRS."
+    },
+    {
+      "type": "paragraph",
+      "text": "Incorporator(s) — sign Arizona articles under penalty of law. Usually a founding director."
+    },
+    {
+      "type": "paragraph",
+      "text": "Statutory agent — Arizona articles plus Form M002 acceptance. An Arizona individual or authorized entity with a physical AZ street address. The corporation cannot be its own agent."
+    },
+    {
+      "type": "paragraph",
+      "text": "EIN responsible party — a real person who controls the club. SSN/ITIN on the IRS site only."
+    },
+    {
+      "type": "paragraph",
+      "text": "Two check signers — usually President and Treasurer. Not a PXU employee."
+    },
+    {
+      "type": "paragraph",
+      "text": "Certified staff sponsor — PXU liaison, ex officio advisor only. Not an officer and not a signer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Also lock: principal-approved legal name; one-paragraph mission; Arizona street address for known place of business; mailing address that is NOT the school mailroom (PXU will not receive, sort, or distribute booster mail); fiscal year end (this kit defaults to July 31 / school-year cycle)."
+    },
+    {
+      "type": "heading",
+      "text": "3. Officer roles (PXU rewrite of the Skyline 2/22/26 sheet)",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The Skyline High School JROTC Booster Club roles sheet from the February 22, 2026 meeting is a useful duty split. Mesa Public Schools forms, MPS Club Sponsor agreements, and “First Sergeant” titles do not apply at Camelback. Rewrite below is for Phoenix Union."
+    },
+    {
+      "type": "paragraph",
+      "text": "President — liaison to the principal. Presides; signs the annual PXU application; keeps the 3–4 person spend-approval channel; submits every fundraising request for prior written principal approval; signs contracts and checks with board approval."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vice President — backup and second vote. Votes promptly on expenditures; acts as President when needed; recruits volunteers; helps on large events."
+    },
+    {
+      "type": "paragraph",
+      "text": "Treasurer — financial custodian. Deposits all money; two-signature checks only; bank reconciliation within 30 days with a second-officer review; archives approvals next to receipts; reports at meetings; year-end statement for the principal by August 31; IRS 990 series after exemption; coordinates receipt backup with the sponsor (sponsor is not a signer)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Secretary — records officer. Minutes (including acceptance of treasurer reports); membership roll; custodian of bylaws, articles, EIN, IRS letter, and district approvals; matching approval logs to minutes; turn records over within 30 days of election; keep financial records five years."
+    },
+    {
+      "type": "paragraph",
+      "text": "Whole-board rule: spending waits for 3–4 yes votes (or a minuted board vote) before the Treasurer pays. No one — including the coach or JROTC instructor — spends club money alone."
+    },
+    {
+      "type": "pagebreak"
+    },
+    {
+      "type": "heading",
+      "text": "4. Arizona nonprofit corporation",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "File Articles of Incorporation for a nonprofit corporation. Do not file Articles of Organization (those are for LLCs). Do not form an LLC for this booster. PXU’s formal path is a nonprofit corporation, and Form 1023-EZ is generally not available to LLCs."
+    },
+    {
+      "type": "paragraph",
+      "text": "File online at the Arizona Business Center (replaced eCorp on January 12, 2026): https://arizonabusinesscenter.azcc.gov/  Forms: https://azcc.gov/corporations/forms/corporation-forms  Paper: ACC Corporations Division, Examination Section, 1300 W. Washington St., Phoenix, AZ 85007. (602) 542-3026. answers@azcc.gov"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Document",
+          "Form",
+          "Regular fee"
+        ],
+        [
+          "Cover sheet",
+          "ACC cover sheet",
+          "—"
+        ],
+        [
+          "Articles of Incorporation – Nonprofit",
+          "C011, or (better) your own articles that meet A.R.S. Title 10 and include IRS language",
+          "$40 (expedite +$35)"
+        ],
+        [
+          "Certificate of Disclosure",
+          "C003 (required ACC form)",
+          "—"
+        ],
+        [
+          "Statutory Agent Acceptance",
+          "M002",
+          "—"
+        ],
+        [
+          "Director / Incorporator extra pages",
+          "C082 / C084 if needed",
+          "—"
+        ]
+      ],
+      "header": true
+    },
+    {
+      "type": "paragraph",
+      "text": "ACC’s stock C011 meets Arizona law only. ACC warns that it does not include IRS 501(c)(3) language. If you will seek tax exemption, write your own articles (or add the IRS clauses in an attachment that is part of the articles) at formation."
+    },
+    {
+      "type": "paragraph",
+      "text": "After the ACC stamps the articles: publish only as the approval letter instructs (A.R.S. 10-3203). Do not file bylaws with the ACC. File the Arizona corporation annual report every year (nonprofit annual report fee is typically $10 — confirm on the current fee schedule) or the corporation can be administratively dissolved."
+    },
+    {
+      "type": "heading",
+      "text": "5. Federal EIN",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Free from the IRS. Anyone charging for an EIN is a scam. Apply only after the Arizona corporation exists. Applying too early also starts the three-year clock for automatic revocation if you later forget Form 990-N."
+    },
+    {
+      "type": "paragraph",
+      "text": "Online: https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number  Form SS-4: https://www.irs.gov/pub/irs-pdf/fss4.pdf  Instructions: https://www.irs.gov/pub/irs-pdf/iss4.pdf"
+    },
+    {
+      "type": "paragraph",
+      "text": "Complete in one sitting (15-minute timeout). Print the confirmation immediately. Limit: one EIN per responsible party per day. Entity type: corporation / nonprofit. Legal name must match the articles. Responsible party is a real controlling individual with that person’s SSN or ITIN. Never use the Phoenix Union or Camelback High School EIN."
+    },
+    {
+      "type": "heading",
+      "text": "6. Putting federal language in the articles (or amending)",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "If someone already filed Arizona articles (or mistakenly filed LLC Articles of Organization), you still need IRS purpose, inurement, politics, and dissolution clauses in a nonprofit corporation’s Articles of Incorporation before Form 1023-EZ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Amendment form for an Arizona nonprofit corporation: C015 Articles of Amendment – Nonprofit. Instructions C015i. Regular fee $25 (expedite $60) — confirm on the ACC fee schedule. Cover sheet required. The board (or members, if your articles require member approval) must authorize the amendment. Do not use LLC Form L015."
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the IRS suggested language from Publication 557, not a paraphrase: https://www.irs.gov/charities-non-profits/suggested-language-for-corporations-and-associations-per-publication-557"
+    },
+    {
+      "type": "paragraph",
+      "text": "Required ideas in the filed articles: (1) organized exclusively for charitable and educational 501(c)(3) purposes; (2) no inurement of net earnings to members or officers except reasonable compensation; (3) no substantial lobbying and no candidate campaigns; (4) on dissolution, leftover assets go only to 501(c)(3) purposes or to government for a public purpose — not back to parents."
+    },
+    {
+      "type": "pagebreak"
+    },
+    {
+      "type": "heading",
+      "text": "7. Federal 501(c)(3) application",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Arizona nonprofit status is not federal tax exemption. File within 27 months of formation if you want exemption retroactive to the incorporation date."
+    },
+    {
+      "type": "paragraph",
+      "text": "Form 1023-EZ (typical new booster): $275 user fee on Pay.gov. Complete the Eligibility Worksheet in the 1023-EZ instructions. Common ceilings: projected annual gross receipts $50,000 or less and assets $250,000 or less. Several automatic disqualifiers (school, church, hospital, foreign address, certain successors, LLCs, etc.)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Full Form 1023: $600 user fee. Use this if the club is not eligible for 1023-EZ. File on Pay.gov (search 1023)."
+    },
+    {
+      "type": "paragraph",
+      "text": "1023-EZ about page: https://www.irs.gov/forms-pubs/about-form-1023-ez  Instructions + worksheet: https://www.irs.gov/pub/irs-pdf/i1023ez.pdf  Full 1023: https://www.irs.gov/forms-pubs/about-form-1023  Fees: https://www.irs.gov/charities-non-profits/form-1023-and-1023-ez-amount-of-user-fee  Pay.gov: https://www.pay.gov/public/home"
+    },
+    {
+      "type": "heading",
+      "text": "Have this folder before you file 1023-EZ (attestation — still keep the papers)",
+      "level": 3
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Document",
+          "Why"
+        ],
+        [
+          "Stamped Arizona Articles of Incorporation (and C015 if you amended)",
+          "You attest the IRS clauses are already in them"
+        ],
+        [
+          "Proof of newspaper publication",
+          "Arizona formation step"
+        ],
+        [
+          "Signed bylaws / constitution",
+          "PXU and IRS"
+        ],
+        [
+          "EIN confirmation letter",
+          "Required on the form"
+        ],
+        [
+          "Officer/director list with mailing addresses",
+          "1023-EZ and PXU"
+        ],
+        [
+          "Completed 1023-EZ Eligibility Worksheet",
+          "Keep it; do not upload it"
+        ],
+        [
+          "Conflict-of-interest policy",
+          "Strongly recommended"
+        ],
+        [
+          "Short activity narrative + first-year budget",
+          "You will describe activities on the form"
+        ],
+        [
+          "Pay.gov login for an officer who may sign, plus the user fee",
+          "Electronic filing only"
+        ]
+      ],
+      "header": true
+    },
+    {
+      "type": "paragraph",
+      "text": "Full Form 1023 also uploads the organizing document, amendments, bylaws, and financials, and may need Form 2848 if a CPA or attorney will speak to the IRS."
+    },
+    {
+      "type": "paragraph",
+      "text": "After exemption, file a 990-series return every year. Form 990-N (e-Postcard) if gross receipts are normally $50,000 or less: https://www.irs.gov/charities-non-profits/annual-electronic-filing-requirement-for-small-exempt-organizations-form-990-n-e-postcard  Due the 15th day of the 5th month after fiscal year end (July 31 year-end → December 15). Miss three consecutive years and 501(c)(3) is automatically revoked."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parent Booster USA and similar firms will file for a fee. Not required. They still need this roster and the PXU-approved name."
+    },
+    {
+      "type": "heading",
+      "text": "8. Bank, insurance, money",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Account in the corporate name with the club EIN. Two signatures on every check. No school or district words in the account title. No individual student accounts (that can destroy 501(c)(3) and create taxable income to a family). Two people count cash; deposit promptly; keep tallies and invoices. Student travel: club donates to the school; students pay required fees to the bookstore; boosters should not sign hotel/bus contracts. Cash donations above the amount on the PXU application need extra Governing Board approval; equipment donations always need Board approval. PXU Trust insurance may cover an approved booster when a school administrator co-sponsors the activity; many clubs still buy their own liability policy. Independent annual review of the books (need not be a CPA)."
+    },
+    {
+      "type": "pagebreak"
+    },
+    {
+      "type": "heading",
+      "text": "9. Bylaws notes",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "A Word draft is in this folder: Camelback_Booster_Club_Bylaws_DRAFT.docx. It is adapted from the Skyline High School JROTC Booster Club bylaws (2025–2026) with PXU constitution items and IRS dissolution language added. Skyline officer names and the Mesa address are not used. Do not file bylaws with the ACC. Vote them in, sign, and keep with the PXU packet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Material changes from the Skyline template: PXU employees cannot be officers or signers (Skyline’s bylaws allowed school employees as officers); two-signature checks and no individual student accounts; digital 3–4 member spend approval; year-end report to the principal by August 31; principal-approved name that does not use the school or PUHSD words."
+    },
+    {
+      "type": "heading",
+      "text": "10. Annual calendar",
+      "level": 2
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "When",
+          "What"
+        ],
+        [
+          "Before any event",
+          "Principal’s written approval for fundraiser / activity / facility use"
+        ],
+        [
+          "Each month",
+          "Bank reconciliation within 30 days, second-officer review"
+        ],
+        [
+          "Each general meeting",
+          "Treasurer report; minutes; approval log vs. receipts"
+        ],
+        [
+          "By August 31",
+          "PXU annual application + year-end financial report to the principal"
+        ],
+        [
+          "ACC anniversary",
+          "Arizona corporation annual report"
+        ],
+        [
+          "15th day of 5th month after FYE",
+          "IRS Form 990-N / 990-EZ / 990"
+        ],
+        [
+          "End of business year",
+          "Elect officers; turn records over within 30 days"
+        ]
+      ],
+      "header": true
+    },
+    {
+      "type": "heading",
+      "text": "Sources",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "PXU Booster Club Resources: https://www.pxu.org/documents/departments/bookstore/booster-club/639148"
+    },
+    {
+      "type": "paragraph",
+      "text": "PXU Bookstore / Student Activities: https://www.pxu.org/page/bookstore/"
+    },
+    {
+      "type": "paragraph",
+      "text": "PXU KJA-OP-1 Formation and Operation of Booster Clubs; Booster Club Application (KJA-OP-1 EB); Establishing a Non-Profit Organization."
+    },
+    {
+      "type": "paragraph",
+      "text": "Camelback athletics contacts: https://www.pxu.org/o/chs/page/athletics/"
+    },
+    {
+      "type": "paragraph",
+      "text": "ACC corporation forms: https://azcc.gov/corporations/forms/corporation-forms"
+    },
+    {
+      "type": "paragraph",
+      "text": "ACC C011i instructions (nonprofit articles, $40 fee, publication, IRS-language warning). Arizona Business Center: https://arizonabusinesscenter.azcc.gov/"
+    },
+    {
+      "type": "paragraph",
+      "text": "IRS Get an EIN; Publication 557 suggested article language; Form 1023-EZ / 1023 about pages and user fees ($275 / $600); Form 990-N ($50,000 threshold)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Skyline JROTC Booster Club bylaws (2025–2026) and 2/22/26 roles sheet — templates only; not Camelback governing documents."
+    }
+  ]
+}

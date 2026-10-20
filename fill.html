@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camelback Booster Club — Fill and Download</title>
+  <style>
+    :root { --ink:#1c1917; --muted:#57534e; --line:#d6d3d1; --crimson:#0c3c8c; --navy:#0c3c8c; --orange:#e85d04; --paper:#f4f6fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.45; }
+    header { background:#fff; color:var(--navy); padding:1rem 1.25rem; display:flex; align-items:center; gap:1.1rem; border-bottom:6px solid var(--orange); }
+    header img { height:108px; width:auto; flex-shrink:0; }
+    header h1 { margin:0 0 .3rem; font-size:1.4rem; color:var(--navy); }
+    header p { margin:0; max-width:46rem; color:#444; font-size:.95rem; }
+    .wrap { max-width:920px; margin:0 auto; padding:1rem 1.25rem 3rem; }
+    section { background:#fff; border:1px solid var(--line); border-radius:10px; padding:1rem 1.1rem; margin:1rem 0; }
+    h2 { margin:0 0 .7rem; color:var(--crimson); font-size:1.1rem; }
+    label { display:block; font-size:.78rem; font-weight:650; color:var(--muted); margin:.4rem 0 .12rem; }
+    input, textarea, select { width:100%; padding:.42rem .5rem; border:1px solid #a8a29e; border-radius:6px; font:inherit; }
+    textarea { min-height:64px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:.55rem .85rem; }
+    .person { border:1px solid var(--line); border-radius:8px; padding:.7rem; margin:.55rem 0; background:#fffdfb; }
+    .person h3 { margin:0 0 .4rem; font-size:.95rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:.45rem; margin:.75rem 0; }
+    button { appearance:none; border:0; background:var(--navy); color:#fff; padding:.48rem .8rem; border-radius:6px; font-weight:650; cursor:pointer; }
+    button.secondary { background:#1f2937; }
+    .tabs button.on { background:var(--orange); color:#fff; border-color:var(--orange); }
+    button.ghost { background:#fff; color:var(--crimson); border:1px solid var(--crimson); }
+    .muted { color:var(--muted); font-size:.9rem; }
+    .ok { color:#166534; font-weight:650; }
+    .missing { background:#fff7ed; border:1px solid #fdba74; padding:.7rem .85rem; border-radius:8px; margin:.6rem 0; }
+    ol { padding-left:1.2rem; }
+    a { color:var(--crimson); }
+    a.btn { display:inline-block; background:var(--navy); color:#fff; text-decoration:none; padding:.48rem .8rem; border-radius:6px; font-weight:650; }
+    a.btn.secondary { background:#1f2937; }
+    pre.doc, .form-preview { white-space:pre-wrap; font-family:"Times New Roman",Times,serif; background:#fff; border:1px solid var(--line); padding:.9rem; font-size:.92rem; max-height:280px; overflow:auto; }
+    .form-preview { white-space:normal; font-size:.85rem; }
+    .form-preview table { width:100%; border-collapse:collapse; margin:.4rem 0; }
+    .form-preview th, .form-preview td { border:1px solid #444; padding:.28rem .35rem; vertical-align:top; text-align:left; }
+    .form-preview h1 { font-size:1rem; margin:0; color:#000; }
+    .form-preview .meta { display:flex; justify-content:space-between; font-size:.75rem; }
+    .form-preview .sig { margin-top:.8rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:.5rem; }
+    .form-preview .agenda-sheet { max-width: 720px; margin: 0 auto; }
+    .form-preview .ag-brand { display:flex; gap:1rem; align-items:center; border-bottom:6px solid var(--orange); padding-bottom:.7rem; margin-bottom:.8rem; }
+    .form-preview .ag-brand img { height:88px; width:auto; }
+    .form-preview .ag-jrotc { margin:0; font-weight:800; letter-spacing:.18em; color:var(--orange); font-size:.85rem; }
+    .form-preview .ag-titles h1 { font-size:1.15rem; color:var(--navy); margin:.15rem 0; }
+    .form-preview .ag-sub { margin:0; font-weight:700; color:var(--navy); }
+    .form-preview .ag-meta { margin:.35rem 0 0; font-size:.85rem; }
+    .form-preview .ag-note { font-size:.8rem; color:#57534e; }
+    .form-preview .ag-item { display:flex; gap:.6rem; margin:.55rem 0; }
+    .form-preview .ag-num { flex:0 0 1.6rem; height:1.6rem; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; }
+    .form-preview .ag-item h3 { margin:0 0 .2rem; font-size:.95rem; color:var(--navy); }
+    .form-preview .ag-item h3 span { color:var(--orange); font-weight:650; font-size:.8rem; }
+    .tabs { display:flex; flex-wrap:wrap; gap:.35rem; margin:.5rem 0; }
+    .tabs button { background:#fff; color:var(--crimson); border:1px solid var(--crimson); }
+    h3 { margin:1rem 0 .4rem; font-size:1rem; color:var(--ink); }
+    .flow { display:flex; flex-wrap:wrap; gap:.4rem; align-items:center; margin:.6rem 0 1rem; }
+    .flow .box { border:1px solid var(--orange); border-radius:8px; padding:.45rem .6rem; background:#fff4ed; font-size:.85rem; max-width:11rem; }
+    .flow .arrow { color:var(--orange); font-weight:700; }
+    .roles { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+    .roles div { border:1px solid var(--line); border-radius:8px; padding:.6rem .7rem; background:#fffdfb; }
+    .roles h3 { margin:0 0 .3rem; color:var(--crimson); font-size:.95rem; }
+    .pdf-frame { width:100%; height:720px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+    .pdf-actions { display:flex; flex-wrap:wrap; gap:.45rem; margin:.6rem 0; }
+    @media (max-width:720px) { .grid, .roles { grid-template-columns:1fr; } }
+    @media print { .actions, .tabs, header p, .no-print { display:none !important; } pre.doc, .form-preview { max-height:none; overflow:visible; border:0; } #howto, #enter, #people, #links, #rules, #roles { display:none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="spartans-logo.jpg" alt="Camelback Spartans" />
+    <div>
+      <h1>Camelback Spartans Booster Club</h1>
+      <p>Start with How to set up (below). Vote officers, then type names. Documents fill in as you type. Not legal advice. Mascot use needs principal permission.</p>
+    </div>
+  </header>
+  <div class="wrap">
+    <p class="no-print" style="margin:0 0 .5rem"><a href="#howto">How to set up</a> · <a href="#roles">Choose a role</a> · <a href="#people">Vote / enter names</a> · <a href="#enter">Club info</a> · <a href="#docs">Download / print</a> · <a href="#docs" data-open="agenda">Meeting agenda</a> · <a href="#rules">KJA-OP-1 rules</a> · <a href="#links">Official links</a></p>
+
+    <section id="howto">
+      <h2>How to set up — follow this order</h2>
+      <p class="muted">Do not skip ahead. District approval and the corporation must exist before the bank and the IRS 501(c)(3) filing. Fill the form on this page as you go; download the matching document at each step.</p>
+
+      <h3>A. Set up the booster club (roles first, then school)</h3>
+      <ol class="howto">
+        <li><strong>Share the roles</strong> (this page, top). Parents read President, Vice President, Treasurer, and Secretary and decide what they will run for.</li>
+        <li><strong>Hold a short vote</strong> at the first parent meeting. Elect President, Vice President, Secretary, and Treasurer. District employees cannot be officers or check signers.</li>
+        <li>Enter the elected names under <a href="#people">Names and positions</a>.</li>
+        <li>Meet the Camelback principal and Athletic Director (or the program’s certified staff sponsor). Ask for written permission to organize. Do not fundraise yet.</li>
+        <li>Download the PXU packet: <a href="https://www.pxu.org/documents/departments/bookstore/booster-club/639148" target="_blank" rel="noopener">Booster Club Application and Formation documents</a>.</li>
+        <li>Choose a legal name the principal approves. Do not put Phoenix Union, PUHSD, or the school name in the title or on the bank account. Spartan mascot is allowed with permission.</li>
+        <li>Enter the club name and mailing address (not the school mailroom) in <a href="#enter">Club info</a>.</li>
+        <li>When articles, bylaws, budget, and (later) bank info exist, submit <strong>two signed copies</strong> of the PXU Booster Club Application to the principal. Year-end packet is due every August 31. Re-apply every year.</li>
+      </ol>
+
+      <h3>B. Adopt the constitution and bylaws</h3>
+      <ol class="howto">
+        <li>On this page, open the <strong>Constitution &amp; bylaws</strong> tab. It fills from the names you typed. PXU KJA-OP-1 requires both a constitution (name, purpose, membership, officers, how to amend, how to ratify) and bylaws (board powers, committees, elections, money rules, meetings, quorum).</li>
+        <li>Read it with the board. Change anything the principal requires. Do not file bylaws with the Arizona Corporation Commission.</li>
+        <li>Hold an organizational meeting using the <a href="#docs" data-open="agenda">Meeting agenda</a> tab (download/print). Vote to adopt constitution and bylaws (majority of members present). Officers sign.</li>
+        <li>Download .doc or Print. Keep a signed copy for the PXU application and for the IRS file.</li>
+      </ol>
+
+      <h3>C. Form the Arizona corporation</h3>
+      <ol class="howto">
+        <li>This is <strong>Articles of Incorporation</strong> for a nonprofit corporation — not Articles of Organization (those are for LLCs). Do not form an LLC.</li>
+        <li>Need: legal name, Arizona street address, at least one incorporator, directors (aim for three), statutory agent with an Arizona street address (not a P.O. Box) who signs an acceptance, and Certificate of Disclosure (C003).</li>
+        <li>File stock Form C011 at the <a href="https://arizonabusinesscenter.azcc.gov/" target="_blank" rel="noopener">Arizona Business Center</a>. Cover sheet + C011 + C003 + statutory-agent acceptance. Regular fee $40.</li>
+        <li>Wait for ACC approval. Phoenix / Maricopa: no newspaper ad. ACC posts the approval in its public database.</li>
+        <li>Get a free EIN at <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener">IRS.gov</a> only after the corporation exists. Paste the EIN in the form above. Never use the school EIN.</li>
+        <li>Board votes the <strong>Banking resolution</strong> (tab on this page). Treasurer takes stamped articles, EIN letter, resolution, and photo ID to the bank. Two signatures on the account. No school/PUHSD words in the account title.</li>
+      </ol>
+
+      <h3>D. Federal 501(c)(3)</h3>
+      <ol class="howto">
+        <li>After C011 is approved, download the <strong>Articles amendment</strong> tab. Board (and members, if C011 said the corporation will have members) votes it in. File it with ACC as Articles of Amendment – Nonprofit. About $25. This adds IRS purpose, no-inurement, no politics, and dissolution language.</li>
+        <li>Wait until that amendment is approved. Do not click submit on Pay.gov before then — Form 1023-EZ is an attestation that those clauses already exist.</li>
+        <li>Run the IRS 1023-EZ eligibility worksheet. Typical new booster: projected annual receipts $50,000 or less and assets $250,000 or less.</li>
+        <li>Create a <a href="https://www.pay.gov/public/login" target="_blank" rel="noopener">Pay.gov</a> account. Search <strong>1023-EZ</strong> and file. User fee $275. Instructions: <a href="https://www.irs.gov/forms-pubs/about-form-1023-ez" target="_blank" rel="noopener">IRS About Form 1023-EZ</a>. If not eligible, file full Form 1023 ($600).</li>
+        <li>File within 27 months of incorporation if you want exemption back to day one. Keep the determination letter with the PXU packet.</li>
+        <li>Every year after that: Form 990-N if receipts are normally $50,000 or less (due the 15th day of the 5th month after fiscal year end).</li>
+      </ol>
+
+      <h3>E. Process flow — who does what</h3>
+      <p class="muted">Money path for every purchase</p>
+      <div class="flow">
+        <div class="box">Need / request (coach or officer)</div>
+        <span class="arrow">→</span>
+        <div class="box">President checks it fits mission and PXU approval</div>
+        <span class="arrow">→</span>
+        <div class="box">3–4 board members vote yes</div>
+        <span class="arrow">→</span>
+        <div class="box">Treasurer pays (two signatures + receipt)</div>
+        <span class="arrow">→</span>
+        <div class="box">Secretary files approval with the minutes</div>
+        <span class="arrow">→</span>
+        <div class="box">Treasurer reconciles bank in 30 days</div>
+      </div>
+    </section>
+
+    <section id="roles">
+      <h2>Step 1 — Choose a role, then vote</h2>
+      <p><strong>Do this first.</strong> Read the four offices, pick who will run, then vote at the first parent meeting. Enter the winners under Names and positions. PXU employees (coach, teacher, JROTC instructor, administrator) cannot hold these jobs and cannot sign checks. They advise only. Print the <strong>Roles handout</strong> tab as a PDF to send before the meeting.</p>
+      <p class="muted">Pattern below comes from a working high-school booster board (digital 3–4 person spend approval). Titles and forms are rewritten for Phoenix Union / Camelback — not Mesa Public Schools.</p>
+
+      <h3>Core governance &amp; spend approval</h3>
+      <ul>
+        <li><strong>Digital approval threshold.</strong> Mandatory 3–4 member executive board approval on the digital platform before Coach/Admin spend requests are processed.</li>
+        <li><strong>Annual meeting cycle.</strong> Executive Board holds 2–3 formal meetings a year to review, accept, and archive Treasurer financial statements.</li>
+        <li><strong>District &amp; tax compliance.</strong> Oversight of PXU District authorizations, fundraising permits, and annual IRS filings.</li>
+      </ul>
+
+      <h3>President</h3>
+      <p><em>Strategic Liaison &amp; Infrastructure Lead.</em> Best fit: comfortable with the principal, checks email, can run a short meeting.</p>
+      <ul>
+        <li><strong>Approval infrastructure.</strong> Sets up and keeps the email list for spend requests so every board member can vote and the club hits the 3–4 member threshold.</li>
+        <li><strong>District authorization.</strong> Manages the annual application for Governing Board approval and executes the Club Sponsor / Booster Agreement with PXU.</li>
+        <li><strong>Digital spend approval.</strong> Primary reviewer for Coach transaction requests; checks mission alignment before quorum voting.</li>
+        <li><strong>Fundraising leadership.</strong> Submits PXU fundraising request forms for every event and presides over all 2–3 annual meetings.</li>
+      </ul>
+
+      <h3>Vice President</h3>
+      <p><em>Operational Support &amp; Digital Approver.</em> Best fit: answers messages quickly; recruits volunteers.</p>
+      <ul>
+        <li><strong>Digital approver.</strong> Consistent, timely vote on expenditure requests so the 3–4 member minimum is met.</li>
+        <li><strong>Presidential succession.</strong> Full President duties in their absence, including the approval list and PXU fundraising requests.</li>
+        <li><strong>Volunteer coordination.</strong> Recruits and coordinates volunteers for fundraising events and club activities set at annual meetings.</li>
+        <li><strong>Project support.</strong> Directs special initiatives and large fundraisers that need administrative oversight.</li>
+      </ul>
+
+      <h3>Secretary</h3>
+      <p><em>Registrar &amp; Documentation Officer.</em> Best fit: writes things down and keeps a folder. If it is not written down, PXU and the IRS treat it as if it did not happen.</p>
+      <ul>
+        <li><strong>Meeting documentation.</strong> Official minutes for all 2–3 annual meetings, including membership acceptance of the Treasurer’s report.</li>
+        <li><strong>Approval verification.</strong> Cross-checks digital approval logs with minutes so spending was authorized under club and District policy.</li>
+        <li><strong>Bylaw custodian.</strong> Official bylaws on file; digital spend-approval protocols documented with PXU.</li>
+        <li><strong>Records archive.</strong> Executive board communications, voting logs, and administrative records.</li>
+      </ul>
+
+      <h3>Treasurer</h3>
+      <p><em>Financial Custodian &amp; First Sergeant Liaison.</em> Best fit: keeps receipts, never mixes club money with personal money. Not a PXU employee.</p>
+      <ul>
+        <li><strong>Receipt allocation.</strong> Coordinates with the Athletic Director / First Sergeant so Coach credit-card and debit receipts are allocated correctly.</li>
+        <li><strong>Digital audit trail.</strong> Permanent archive pairing 3–4 member approvals with receipts for every transaction.</li>
+        <li><strong>Financial reporting.</strong> Comprehensive year-to-date income/expense statements at the 2–3 annual meetings.</li>
+        <li><strong>PXU &amp; tax compliance.</strong> Closes the fiscal year, submits the Annual Report to the Principal and District, and files IRS tax forms.</li>
+      </ul>
+      <p class="muted">School sponsor / coach / JROTC instructor: advisor only. Tells the board what the program needs. Not an officer. Not a signer.</p>
+      <div class="pdf-actions no-print">
+        <a class="btn" href="camelback-jrotc-executive-roles-handout.pdf" target="_blank" rel="noopener">Open roles PDF</a>
+        <a class="btn secondary" href="camelback-jrotc-executive-roles-handout.pdf" download="camelback-jrotc-executive-roles-handout.pdf">Download roles PDF</a>
+      </div>
+      <iframe class="pdf-frame" title="Camelback JROTC Booster Club executive roles handout" src="camelback-jrotc-executive-roles-handout.pdf"></iframe>
+    </section>
+
+    <section id="enter">
+      <h2>Enter information here — club, school, addresses</h2>
+      <div class="grid">
+        <div><label>Booster club legal name (principal-approved)</label><input id="clubName" placeholder="e.g. Spartan JROTC Boosters" /></div>
+        <div><label>Program this booster supports</label><input id="program" placeholder="JROTC, football, band" /></div>
+        <div><label>School</label><input id="schoolName" value="Camelback High School" /></div>
+        <div><label>School district</label><input id="district" value="Phoenix Union High School District No. 210" /></div>
+        <div><label>School street address</label><input id="schoolAddr" value="4612 N. 28th Street, Phoenix, AZ 85016" /></div>
+        <div><label>School phone</label><input id="schoolPhone" value="(602) 764-7000" /></div>
+        <div><label>Athletic Director / campus contact</label><input id="adName" value="Daniel B. Eaton, Athletic Director" /></div>
+        <div><label>AD email / phone</label><input id="adContact" value="deaton@phoenixunion.org · (602) 764-7007" /></div>
+        <div><label>Club mailing address (not the school mailroom)</label><input id="mailAddr" placeholder="PO Box or officer address" /></div>
+        <div><label>Arizona street address (known place of business)</label><input id="bizAddr" placeholder="AZ street — statutory agent cannot use a P.O. Box" /></div>
+        <div><label>Fiscal year end</label>
+          <select id="fyEnd">
+            <option value="July 31">July 31</option>
+            <option value="June 30">June 30</option>
+            <option value="December 31">December 31</option>
+          </select>
+        </div>
+        <div><label>EIN / Taxpayer ID (leave blank until IRS issues it)</label><input id="ein" placeholder="XX-XXXXXXX" /></div>
+        <div><label>PXU application type</label>
+          <select id="appType">
+            <option value="New Application">New Application</option>
+            <option value="Renewal or Updated Application">Renewal or Updated Application</option>
+          </select>
+        </div>
+        <div><label>Type of organization</label>
+          <select id="orgType">
+            <option value="Formal Non-Profit Corporation">Formal Non-Profit Corporation</option>
+            <option value="Informal Non-Profit Association">Informal Non-Profit Association</option>
+          </select>
+        </div>
+        <div><label>Anticipated maximum fiscal-year donations (for Board approval)</label><input id="maxDonations" placeholder="e.g. $5,000" /></div>
+        <div><label>Bank name (optional)</label><input id="bankName" placeholder="e.g. Chase, Wells Fargo, credit union" /></div>
+        <div><label>Board meeting date for banking resolution</label><input id="meetingDate" placeholder="Month Day, Year" /></div>
+        <div style="grid-column:1/-1"><label>Mission / purpose (goes on the PXU application)</label>
+          <textarea id="mission" placeholder="Support Camelback students in [program] by raising funds and volunteer help for activities, equipment, and educational experiences, in cooperation with school administration."></textarea>
+        </div>
+        <div style="grid-column:1/-1"><label>Proposed activities and events for the year / budget notes</label>
+          <textarea id="activities" placeholder="List fundraisers, events, and a simple budget. Principal must approve each fundraiser before it happens."></textarea>
+        </div>
+      </div>
+    </section>
+    <section id="people">
+      <h2>Enter information here — names, positions, addresses</h2>
+      <p class="muted">PXU employees cannot be officers or check signers. Do not type Social Security numbers here. Use Add member for extra parents.</p>
+      <div id="peopleMount">
+        <div class="person" data-id="president"><h3>President</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="President" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+        <div class="person" data-id="vp"><h3>Vice President</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="Vice President" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+        <div class="person" data-id="secretary"><h3>Secretary</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="Secretary" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+        <div class="person" data-id="treasurer"><h3>Treasurer (opens the bank account)</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="Treasurer (bank account opener)" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+        <div class="person" data-id="agent"><h3>Statutory agent</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="Statutory agent (Arizona street address)" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+        <div class="person" data-id="sponsor"><h3>School sponsor (advisor only — not an officer)</h3><div class="grid">
+          <div><label>Full legal name</label><input data-f="name" /></div>
+          <div><label>Position / title</label><input data-f="title" value="School sponsor — advisor only, not an officer" /></div>
+          <div><label>Mailing address</label><input data-f="address" /></div>
+          <div><label>Phone</label><input data-f="phone" /></div>
+          <div><label>Email</label><input data-f="email" /></div>
+          <div><label>Notes (director? signer?)</label><input data-f="notes" /></div>
+        </div></div>
+      </div>
+      <div class="actions">
+        <button type="button" id="btnAddMember">Add member / extra director</button>
+        <button type="button" class="secondary" id="btnSave">Save in this browser</button>
+        <button type="button" class="ghost" id="btnClear">Clear saved data</button>
+      </div>
+      <p class="muted" id="saveMsg"></p>
+      <div class="missing" id="missingBox"></div>
+    </section>
+    <section id="docs">
+      <h2>Download / print filled documents</h2>
+      <p class="muted">These update as you type above. Download PDF (print dialog — choose Save as PDF), or .doc / .txt. Print two copies of the PXU application for the principal.</p>
+      <div class="tabs no-print">
+        <button type="button" class="on" data-doc="pxu">PXU application</button>
+        <button type="button" data-doc="roster">Roster</button>
+        <button type="button" data-doc="bylaws">Constitution &amp; bylaws</button>
+        <button type="button" data-doc="plan">Business plan</button>
+        <button type="button" data-doc="amend">Articles amendment</button>
+        <button type="button" data-doc="bank">Banking resolution</button>
+        <button type="button" data-doc="fundraiser">Fundraiser request</button>
+        <button type="button" data-doc="rec">Bank reconciliation</button>
+        <button type="button" data-doc="yearend">Year-end financial report</button>
+        <button type="button" data-doc="roles">Roles handout</button>
+        <button type="button" data-doc="agenda">Meeting agenda</button>
+      </div>
+      <div class="actions no-print">
+        <button type="button" id="btnPdf">Download PDF</button>
+        <button type="button" class="secondary" id="btnDoc">Download .doc</button>
+        <button type="button" class="secondary" id="btnTxt">Download .txt</button>
+        <button type="button" class="secondary" id="btnCsv">Download roster CSV</button>
+        <button type="button" class="ghost" id="btnPrint">Print / Save as PDF</button>
+      </div>
+      <pre class="doc" id="preview"></pre>
+      <div id="formPreview" class="form-preview" style="display:none"></div>
+      <iframe id="rolesPdf" class="pdf-frame" style="display:none" title="Roles handout PDF" src="camelback-jrotc-executive-roles-handout.pdf"></iframe>
+    </section>
+    <section id="links" class="no-print">
+      <h2>Official links (from the initial-steps document)</h2>
+      <p class="muted">These were the hyperlinks embedded in <em>Camelback Booster initial steps list.docx</em>.</p>
+      <h3>Phoenix Union / Camelback</h3>
+      <ul>
+        <li><a href="https://www.pxu.org/o/chs/page/athletics" target="_blank" rel="noopener">Camelback Athletic Director</a></li>
+        <li><a href="https://aiaonline.org/schools/25/camelback" target="_blank" rel="noopener">Athletic Secretary / AIA Camelback listing</a></li>
+        <li><a href="https://www.pxu.org/o/chs/page/clubs-groups/" target="_blank" rel="noopener">Assistant Principal for Global Connections / Clubs &amp; Groups</a></li>
+        <li><a href="https://www.pxu.org/documents/departments/bookstore/booster-club/639148" target="_blank" rel="noopener">PXU Booster Club Application and Formation packet</a></li>
+        <li><a href="https://www.pxu.org/documents/departments/bookstore/documents%2C-forms%2C-and-handbooks/639133" target="_blank" rel="noopener">Club Constitution Form and Fundraiser Approval Form (PXU documents/forms/handbooks)</a></li>
+      </ul>
+      <h3>Arizona / IRS</h3>
+      <ul>
+        <li><a href="https://www.azcc.gov/docs/default-source/corps-files/instructions/c011i-instructions-articles-of-inc-nonprofit.pdf?sfvrsn=eac39497_2" target="_blank" rel="noopener">Articles of Incorporation – Nonprofit (ACC C011i instructions)</a></li>
+        <li><a href="https://arizonabusinesscenter.azcc.gov/" target="_blank" rel="noopener">Arizona Business Center (file C011)</a></li>
+        <li><a href="https://www.pay.gov/public/login" target="_blank" rel="noopener">Pay.gov login — file Form 1023-EZ (search “1023-EZ”)</a></li>
+        <li><a href="https://www.irs.gov/forms-pubs/about-form-1023-ez" target="_blank" rel="noopener">IRS: About Form 1023-EZ (how to apply on Pay.gov)</a></li>
+        <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener">IRS EIN (free)</a></li>
+      </ul>
+      <h3>How-to (background only — PXU KJA-OP-1 controls)</h3>
+      <ul>
+        <li><a href="https://parentbooster.org/start-a-booster-club" target="_blank" rel="noopener">Start a booster club / EIN / 501(c)(3) / Parent Booster USA</a></li>
+        <li><a href="https://parentbooster.org/run-a-booster-club" target="_blank" rel="noopener">Run a booster club — budget, insurance</a></li>
+        <li><a href="https://cullinanelaw.com/how-to-start-a-booster-club/" target="_blank" rel="noopener">Board of directors, articles, bylaws, 501(c)(3) (Cullinane Law)</a></li>
+        <li><a href="https://www.boosterspark.com/learn/a/how-to-structure-a-booster-club-59" target="_blank" rel="noopener">Leadership roles, committees, financial practices (BoosterSpark)</a></li>
+        <li><a href="https://aim-companies.com/booster-clubs-everything-you-need-to-know-about-running-one/" target="_blank" rel="noopener">Mission statement (AIM)</a></li>
+        <li><a href="https://www.jerseywatch.com/blog/how-to-start-a-booster-club" target="_blank" rel="noopener">Goals (Jersey Watch)</a></li>
+        <li><a href="https://www.boosterhub.com/blog/establishing-booster-club-membership-guidelines" target="_blank" rel="noopener">Membership guidelines (BoosterHub)</a></li>
+      </ul>
+    </section>
+    <section id="rules">
+      <h2>KJA-OP-1 operating rules (must follow)</h2>
+      <p class="muted">From PXU Formation and Operation of Booster Clubs. “Approval” always means prior written approval of the principal or the principal’s designee.</p>
+      <h3>Authority</h3>
+      <ul>
+        <li>The club assists and supports; it does not supplant the school program. The Superintendent controls the educational program. The principal decides which trips and activities students take. The certified staff sponsor is the liaison and works under the principal.</li>
+        <li>Only an approved booster may use PXU facilities. Re-apply every year. Year-end financial report and application due to the principal by August 31.</li>
+        <li>The club does not commit or represent the District. Do not use school letterhead. PXU is not liable for booster contracts. Purchases for the school are donations; do not expect reimbursement.</li>
+      </ul>
+      <h3>Money and donations</h3>
+      <ul>
+        <li>Own EIN. Never use the PUHSD taxpayer ID. Two signatures on every check. No PUHSD or school name on the account.</li>
+        <li>Donate funds to a school program, student activity, or student organization (competitive fees, travel paid through the school, PUHSD-approved uniforms/equipment, consultant fees handled by the District). Direct club spending is limited to principal-approved nonprofit events, apparel, trophies, and scholarships paid to an educational institution (not based on fundraising participation).</li>
+        <li>Cash donations in a year are pre-approved up to the amount on the PXU application. Amounts above that, and any equipment donation, need Governing Board approval.</li>
+        <li>No individual student accounts. No petty cash for a coach. No commingling with student-club or District funds. Two people count cash. Keep source documentation. Bank rec within 30 days; second officer signs it. Independent annual review. Records 5 years. Turn over within 30 days of election. Mail to a PO box or member address — not the school.</li>
+      </ul>
+      <h3>Staff and students</h3>
+      <ul>
+        <li>PXU employees advise only. Not officers. Not signers. An employee may help a booster activity only when not on duty.</li>
+        <li>Students pay required trip/participation fees to the campus bookstore. Do not require a student to pay the booster to participate. Do not give awards directly to a student. Do not employ, contract, or supplement anyone who works with the program.</li>
+        <li>Do not supervise coaches, set participation rules, or host events in the school’s name. School sponsors student events. Gifts to a coach need prior written principal approval.</li>
+        <li>Parents and members follow the same student-interaction conduct standards as PXU employees.</li>
+      </ul>
+      <h3>Fundraising</h3>
+      <ul>
+        <li>Parents plan and run fundraisers. Students are not required to sell a quota. Door-to-door is voluntary only.</li>
+        <li>Submit a Request for Approval of Organization Fund Raiser (tab above) during planning. Principal must approve use of a school name. Student-organization fundraisers take precedence over booster ones.</li>
+        <li>If students (cadets) work the fundraiser, <strong>net proceeds must be split</strong> between the booster club and the school’s JROTC student activity account (campus bookstore / District activity account — not cash to students). Write both percentages on the fundraiser request before the principal signs (AG Opinion I84-032). Parent-only fundraisers may stay 100% booster.</li>
+        <li>No raffles on PXU property or using PXU resources (AG Opinion I84-018). Calling it something else does not make it legal.</li>
+        <li>Tax-deductible receipts only after IRS 501(c)(3). If the donor gets a dinner or similar benefit, deduct that value from the receipted amount.</li>
+        <li>Concessions only with principal approval and Maricopa County food-handling rules. Facility use needs a Facility Rental Agreement; some uses need a $1,000,000 certificate of insurance naming PXU as additional insured. PXU Trust coverage applies to an approved booster only when a school administrator co-sponsors the activity.</li>
+        <li>Do a financial recap after each fundraiser.</li>
+      </ul>
+      <h3>If the District asks for records and the club refuses</h3>
+      <p>PXU revokes approval and bars access to facilities and students.</p>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
